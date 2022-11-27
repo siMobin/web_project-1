@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+*{
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    font-family: 'Roboto', sans-serif;
+}
+body{
+    color: rgb(255, 255, 255);
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    background-image: url(./image/circle.svg), linear-gradient(45deg, rgb(0, 1, 26), rgb(15, 0, 49));
+    background-position: right 120px, top;  
+    background-repeat: no-repeat;
+    background-size: 160px,auto;
+    backdrop-filter: blur(150px);
+}
+
+
+/*.......................................scrollbar................................*/
+/*............width........*/
+::-webkit-scrollbar{
+    width: 5px;
+    transition-property: width;
+    transition-duration: 3s;
+}
+
+::-webkit-scrollbar:hover{
+    width: 10px;
+}
+  
+/* Track */
+::-webkit-scrollbar-track{
+    box-shadow: inset 0 0 5px grey; 
+}
+   
+/* Handle */
+::-webkit-scrollbar-thumb{
+    background: #030044dc; 
+    border-radius: 10px;
+}
+  
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover{
+    background: #00006b;   
+}
+
+p{
+    text-align: justify;
+}
+
+nav{
+    display: flex;
+    padding-right: 3em;
+    height: 40px;
+    background-color: rgba(127, 255, 212, 0);
+    justify-content: flex-end;
+    align-items: center;
+    border-bottom: 1px solid rgb(0, 0, 71);   
+}
+
+nav a{
+    padding: 0 1em;
+    margin: 0 3px;
+    text-decoration: none;
+    color: white;  
+}
+
+nav a:hover{
+    text-decoration: underline;
+    color: rgb(250, 240, 220);
+}
+
+.container{
+    width: 100%;
+    height: 100%;
+    scroll-snap-type: y mandatory;
+}
+
+.container::-webkit-scrollbar{
+    display: none;
+}
+
+.container section{
+    scroll-snap-align: start;
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+}
+
+.head{
+    display: flex;
+    justify-content: space-around;
+ 
+}
+
+.head img{
+    width: 400px;
+}
+
+@media screen and (max-width:900px) {
+    .head img{
+        width: 50%;
+    }
+}
+
+.head p{
+    max-width: 50vw;
+    font-size: 18px;
+}
+
+.head h1{
+    font-size: 80px;
+    font-weight: 700;
+    color: white;
+}
+
+.link{
+    position: absolute;
+    bottom: 3em;
+    left: 2em;
+}
+
+.fa-brands{
+    width: 50px;
+    cursor: pointer;
+}
+
+#card{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.card{
+    border-radius: 10px;
+    margin: 5px;
+    padding: 5px;
+    width: 350px;
+    min-height: 60vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.100);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.500),0 8px 32px 0 rgba(255, 255, 255, 0.300)inset;
+    backdrop-filter: blur( 10px );
+    -webkit-backdrop-filter: blur( 4px );
+    border: 1px solid rgba(255, 255, 255, 0.300);
+}
+
+.card h5{
+    font-weight: 500;
+    font-size: 20px;
+    margin: 10px 0;
+}
