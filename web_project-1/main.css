@@ -16,35 +16,7 @@ body{
     background-repeat: no-repeat;
     background-size: 160px,auto;
     backdrop-filter: blur(150px);
-}
-
-
-/*.......................................scrollbar................................*/
-/*............width........*/
-::-webkit-scrollbar{
-    width: 5px;
-    transition-property: width;
-    transition-duration: 3s;
-}
-
-::-webkit-scrollbar:hover{
-    width: 10px;
-}
-  
-/* Track */
-::-webkit-scrollbar-track{
-    box-shadow: inset 0 0 5px grey; 
-}
-   
-/* Handle */
-::-webkit-scrollbar-thumb{
-    background: #030044dc; 
-    border-radius: 10px;
-}
-  
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover{
-    background: #00006b;   
+    align-items: center;
 }
 
 p{
@@ -53,17 +25,18 @@ p{
 
 nav{
     display: flex;
-    padding-right: 3em;
-    height: 40px;
+    padding: 0 2em;
+    height: 50px;
     background-color: rgba(127, 255, 212, 0);
-    justify-content: flex-end;
+    justify-content: space-between;
     align-items: center;
-    border-bottom: 1px solid rgb(0, 0, 71);   
+    border-bottom: 1px solid rgb(0, 0, 71);
+    font-weight: 500;
 }
 
 nav a{
     padding: 0 1em;
-    margin: 0 3px;
+    margin-left: 3px;
     text-decoration: none;
     color: white;  
 }
@@ -75,8 +48,9 @@ nav a:hover{
 
 .container{
     width: 100%;
-    height: 100%;
+    height: 90%;
     scroll-snap-type: y mandatory;
+    align-items: center;
 }
 
 .container::-webkit-scrollbar{
@@ -85,13 +59,13 @@ nav a:hover{
 
 .container section{
     scroll-snap-align: start;
-    display: flex;
     width: 100vw;
-    height: 100vh;
+    height: 90vh;
 }
 
 .head{
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;
  
 }
@@ -121,6 +95,7 @@ nav a:hover{
     position: absolute;
     bottom: 3em;
     left: 2em;
+    z-index: 5;
 }
 
 .fa-brands{
@@ -155,4 +130,61 @@ nav a:hover{
     font-weight: 500;
     font-size: 20px;
     margin: 10px 0;
+}
+
+
+.icon{
+    color: #007BFF;
+    font-size: 2rem;
+    overflow: hidden;
+}
+
+.icon div{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.icon .fa-solid{
+    transform: skewX(-20deg);
+    padding: 1em;
+}
+.icon .fa-solid:hover{
+    text-shadow: 0 0 10px rgba(0, 123, 255, .7), 0 0 30px rgba(0, 123, 255, .7), 0 0 40px rgba(0, 123, 255, .7);
+}
+
+.footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    text-align: center;
+}
+
+.people{
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 1em;
+}
+
+.p{
+    width: 300px;
+    min-height: 200px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid rgb(199, 199, 199);
+}
+
+.p i{
+    font-size: 5rem;
+    margin-bottom: .2em;
+}
+
+.contact{
+    border-top: 1px solid rgb(0, 0, 71);
+    padding: 10px;
+    display: flex;
+    justify-content: space-around;
 }
